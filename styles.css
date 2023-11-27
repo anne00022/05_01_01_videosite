@@ -1,0 +1,211 @@
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* MENU STYLING */
+
+/* Baggrundsfarve til header og footer */
+.header,
+.footer {
+  width: 98%;
+}
+
+/* Justering af baggrundsfarve i header og footer */
+.header,
+.footer {
+  display: flex;
+}
+
+.header.left_section,
+.footer.left_section {
+  width: 50%;
+  flex: 1;
+}
+
+.header.right_section,
+.footer.right_section {
+  width: 50%;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-image: url(header.png);
+  background-size: cover;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  color: rgb(195, 195, 195);
+  font-size: 0.9rem;
+  margin: auto 25px;
+}
+
+.logo {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: rgb(0, 0, 0);
+}
+
+#menu_billeder {
+  background-image: none;
+  background-color: #f7f4ed;
+}
+
+/* -------------- */
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+#mathilde_video {
+  padding: 27% 10%;
+  margin: 0;
+  border: none;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.video_tekst {
+  width: 69%;
+  margin: 263px auto;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.left_section {
+  width: 49.7%;
+  height: 100%;
+}
+
+.right_section {
+  width: 50.3%;
+  height: 100%;
+}
+
+.left_section {
+  /* Til venstre side, her kan du tilføje styling til venstre sektion */
+  background-color: white; /* Skift farven efter dit behov */
+}
+
+.right_section {
+  /* Til højre side, her ændrer vi baggrundsfarven */
+  background-color: #f7f4ed; /* Ændre baggrundsfarven til det ønskede */
+}
+
+/* ____________________GALLERI_______________ */
+
+.galleri_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 90px;
+  margin: 190px 120px;
+}
+
+img {
+  width: 100%;
+}
+
+/* Responsivt design for mindre skærme */
+@media screen and (max-width: 1200px) {
+  .logo {
+    font-size: 0.9rem;
+    margin-top: 22px;
+  }
+
+  .header {
+    background-image: none;
+  }
+
+  a {
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video_tekst {
+    width: 154%;
+    margin: 12% 10%;
+    padding-left: 13%;
+  }
+
+  .right_section {
+    background-color: #f7f4ed;
+    width: 100%;
+  }
+
+  .left_section {
+    height: 450px;
+  }
+
+  #mathilde_video {
+    width: 76%;
+    padding: 12%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .galleri_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 90px;
+    margin: 100px;
+  }
+}
